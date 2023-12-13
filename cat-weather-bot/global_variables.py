@@ -1,0 +1,4 @@
+import os
+
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+OPEN_WEATHER_TOKEN = os.getenv("OPEN_WEATHER_TOKEN")
