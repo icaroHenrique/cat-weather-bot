@@ -1,2 +1,1 @@
-Olá {user_first_name}!\nA temperatura do seu local é {temperature}°C com sensação termica de {apparent_temperature}°C!
-Olá {user_first_name}!\nA de onde você está é {temperature}°C com sensação termica de {apparent_temperature}°C!
+Olá humano {user_first_name}!\nO calor está intenso hoje! Com {temperature}°C, a sensação térmica é ainda mais elevada de {apparent_temperature}°C. Melhor encontrar uma sombra fresca para relaxar e evitar o calor excessivo. ☀️🔥

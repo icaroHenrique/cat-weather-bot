@@ -1,2 +1,1 @@
-Olá {user_first_name}!\nA temperatura do seu local é {temperature}°C com sensação termica de {apparent_temperature}°C!
-Olá {user_first_name}!\nA de onde você está é {temperature}°C com sensação termica de {apparent_temperature}°C!
+Olá humano {user_first_name}!\nBrrr... o dia está realmente frio lá fora. A temperatura atual marca {temperature}°C, mas a sensação térmica é de {apparent_temperature}°C. Hora de procurar um lugar quentinho para se aconchegar! A sensação termica é de {apparent_temperature}°C ❄️🐱

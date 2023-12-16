@@ -1,2 +1,1 @@
-Olá {user_first_name}!\nA temperatura do seu local é {temperature}°C com sensação termica de {apparent_temperature}°C!
-Olá {user_first_name}!\nA de onde você está é {temperature}°C com sensação termica de {apparent_temperature}°C!
+Olá humano {user_first_name}!\nEstá um dia quente e ensolarado, perfeito para um cochilo na sombra. A temperatura atinge {temperature}°C, e a brisa quente dá aquele toque especial ao ambiente. A sensação termica é de {apparent_temperature}°C ☀️😺

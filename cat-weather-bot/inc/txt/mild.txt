@@ -1,2 +1,1 @@
-Olá {user_first_name}!\nA temperatura do seu local é {temperature}°C com sensação termica de {apparent_temperature}°C!
-Olá {user_first_name}!\nA de onde você está é {temperature}°C com sensação termica de {apparent_temperature}°C!
+Olá humano {user_first_name}!\nO clima está ameno e agradável hoje. Com {temperature}°C, é um convite para explorar o jardim. Nem muito quente, nem muito frio - simplesmente perfeito! A sensação termica é de {apparent_temperature}°C 🌸🌤️

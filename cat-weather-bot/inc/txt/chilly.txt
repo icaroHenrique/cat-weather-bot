@@ -1,2 +1,1 @@
-Olá {user_first_name}!\nA temperatura do seu local é {temperature}°C com sensação termica de {apparent_temperature}°C!
-Olá {user_first_name}!\nA de onde você está é {temperature}°C com sensação termica de {apparent_temperature}°C!
+Olá humano {user_first_name}!\nHoje, o ambiente está fresco e aconchegante para um gato tranquilo como eu. A temperatura atual é de {temperature}°C, e a brisa suave deixa tudo mais agradável. A sensação termica é de {apparent_temperature}°C 🍃🐾
