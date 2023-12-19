@@ -1,1 +1,2 @@
-Olá humano {user_first_name}!\nBrrr... o dia está realmente frio lá fora. A temperatura atual marca {temperature}°C, mas a sensação térmica é de {apparent_temperature}°C. Hora de procurar um lugar quentinho para se aconchegar! A sensação termica é de {apparent_temperature}°C ❄️🐱
+Miau Miau {user_first_name}!\nBrrr... o dia está realmente frio lá fora. A temperatura atual marca {temperature}°C, mas a sensação térmica é de {apparent_temperature}°C. Hora de procurar um lugar quentinho para me aconchegar! ❄️🐱
+Miau Miau {user_first_name}!\nO frio chegou com tudo! A temperatura está marcando {temperature}°C, e a sensação térmica é de {apparent_temperature}°C. Estou procurando um cantinho quentinho! ❄️🐱
