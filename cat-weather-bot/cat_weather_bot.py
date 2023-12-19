@@ -15,7 +15,7 @@ class CatWeatherBot():
     def __define_temperature_representation(self, temperature: int | float):
         temperature_representation = str()
         
-        if temperature > -15 and temperature < 0:
+        if temperature < 0:
             temperature_representation = "very_cold"
         elif temperature > 0 and temperature < 10:
             temperature_representation = "cold"
