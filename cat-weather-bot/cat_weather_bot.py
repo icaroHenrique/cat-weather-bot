@@ -4,7 +4,7 @@ import random
 from dataclasses import dataclass
 from open_weather_api import OpenWeatherApi
 from telegram import Update
-from telegram.ext import ApplicationBuilder, ContextTypes, CommandHandler, MessageHandler, filters, CallbackContext, ConversationHandler
+from telegram.ext import ApplicationBuilder, ContextTypes, CommandHandler, MessageHandler, filters, ConversationHandler
 
 @dataclass
 class CatWeatherBot():
