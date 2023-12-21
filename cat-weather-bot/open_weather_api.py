@@ -14,7 +14,7 @@ class OpenWeatherApi:
         API_PARAMETERS = f"appid={self.api_key}&units={self.units}&mode={self.mode}&lang={self.lang}"
         API_URL = f"{self.base_api_url}?{API_PARAMETERS}"
         return API_URL
-        
+    
     def get_temperature(self, latitude: int, longitude: int) -> dict:
         api_url = self.__create_api_url()
         temperature_data = {}
@@ -23,6 +23,4 @@ class OpenWeatherApi:
         logging.info(json_request)
         temperature_data['temperature'] = json_request['main']['temp']
         temperature_data[ 'apparent_temperature'] = json_request['main']['feels_like']
-        
         return temperature_data
-
