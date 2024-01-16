@@ -2,7 +2,7 @@ name: Docker Build
 
 env:
   DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
-
+  DOCKER_HUB_USERNAME: "icarohenrique"
 on:
   push:
     branches: [ "task/create-ci-docker-build" ]
@@ -13,8 +13,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v3
+    - name: Docker Setup Buildx
+      uses: docker/setup-buildx-action@v3.0.0
     - name: Login Docker Hub
-      run: docker login --username icarohenrique --password $DOCKER_HUB_TOKEN
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag icarohenrique/cat-weather-bot:$(date +%s)
+      run: docker login --username $DOCKER_HUB_USERNAME --password $DOCKER_HUB_TOKEN
+    - name: Build and Push Docker image
+      run: docker build . --platform linux/amd64,linux/arm64,linux/arm/v7 --file Dockerfile --push --tag icarohenrique/cat-weather-bot:latest
+          
