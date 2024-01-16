@@ -5,9 +5,9 @@ env:
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "task/create-ci-docker-build" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "task/create-ci-docker-build" ]
 
 jobs:
   build:
