@@ -6,7 +6,6 @@
 
 tasks:
   - init: |
-      sudo apt install python3.11 python3.11-venv -y
-      python3.11 -m venv .venv
-      exit
-  - command: source .venv/bin/activate
+      pyenv install 3.11 -f
+      pyenv local 3.11
+      pip install -r requirements.txt

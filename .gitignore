@@ -3,3 +3,4 @@ __pycache__/
 .venv
 # Ignore dynaconf secret files
 .secrets.*
+.python-version
