@@ -5,10 +5,15 @@ install:
 	@echo "Installing for dev environment"
 	@.venv/bin/python -m pip install -e '.[dev]'
 
+install-dev:
+	@.venv/bin/python -m pip install -r requirements.dev.txt
+
+install-test:
+	@.venv/bin/python -m pip install -r requirements.test.txt
 
 virtualenv:
 	@python -m venv .venv
-	@source .venv/bin/activate
+	@python -m pip install --upgrade pip
 
 ipython:
 	@.venv/bin/ipython
@@ -17,8 +22,8 @@ lint:
 	@.venv/bin/pflake8
 
 fmt:
-	@.venv/bin/isort dundie tests integration
-	@.venv/bin/black dundie tests integration
+	@.venv/bin/isort cat-weather-bot tests integration
+	@.venv/bin/black cat-weather-bot tests integration
 
 test:
 	@.venv/bin/pytest -s --forked

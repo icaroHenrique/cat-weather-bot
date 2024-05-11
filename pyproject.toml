@@ -1,0 +1,31 @@
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q -vv -s"
+testpaths = [
+    "tests",
+    "integration"
+]
+
+[tool.flake8]
+exclude = [".venv", "build"]
+max-line-length = 79
+
+[tool.black]
+line-length = 79
+target-version = ["py36", "py37"]
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.venv
+  | _build
+  | build
+  | dist
+  | migrations
+)/
+'''
+
+[tool.isort]
+profile = "black"
+src_paths = ["cat-weather-bot", "tests", "integration"]
+multi_line_output = 3  # VHI
