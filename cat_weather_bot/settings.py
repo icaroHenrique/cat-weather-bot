@@ -1,6 +1,13 @@
 from dynaconf import Dynaconf
+import json
+import os
 
-settings = Dynaconf(
+ROOT_PATH = os.path.dirname(__file__)
+DB_PATH = os.path.join(ROOT_PATH, "assets", "database.json")
+DB_MODEL_PATH = os.path.join(ROOT_PATH, "assets", "database.init.json")
+
+
+dynaconf_settings = Dynaconf(
     envvar_prefix="DYNACONF",
     settings_files=["settings.toml", ".secrets.toml"],
     load_dotenv=True,

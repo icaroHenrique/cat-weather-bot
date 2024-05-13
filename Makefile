@@ -1,5 +1,4 @@
-.PHONY: install virtualenv ipython clean test watch pflake8
-
+.PHONY: install virtualenv ipython enable-debugging clean test watch pflake8
 
 install:
 	@echo "Installing for dev environment"
@@ -17,6 +16,9 @@ virtualenv:
 
 ipython:
 	@.venv/bin/ipython
+
+enable-debugging:
+	@export PYTHONBREAKPOINT=ipdb.set_trace  
 
 lint:
 	@.venv/bin/pflake8

@@ -1,8 +1,8 @@
 import logging
 
 from cat_weather_bot import CatWeatherBot
-from config import settings
 from open_weather_api import OpenWeatherApi
+from settings import dynaconf_settings as settings
 
 if __name__ == "__main__":
     assert settings.OPEN_WEATHER_TOKEN

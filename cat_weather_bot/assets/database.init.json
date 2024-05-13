@@ -1,0 +1,38 @@
+{
+    "chilly": [
+        {
+            "message" : "",
+            "image_path" : ""
+        }
+    ],
+    "cold": [
+        {
+            "message" : "text",
+            "image_path" : "image_path"
+        }
+    ],
+    "hot": [
+        {
+            "message" : "text",
+            "image_path" : "image_path"
+        }
+    ],
+    "mild": [
+        {
+            "message" : "text",
+            "image_path" : "image_path"
+        }
+    ],
+    "very_cold": [
+        {
+            "message" : "text",
+            "image_path" : "image_path"
+        }
+    ],
+    "very_hot": [
+        {
+            "message" : "text",
+            "image_path" : "image_path"
+        }
+    ]             
+}
