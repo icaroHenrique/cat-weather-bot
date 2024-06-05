@@ -2,43 +2,73 @@
     "chilly": [
         {
             "id": 0,
-            "message": "",
-            "image_path": ""
+            "message": "Miau Miau {user_first_name}!\nHoje, o ambiente está fresco e aconchegante para um gatinho tranquilo como eu. A temperatura atual é de {temperature}°C, e a brisa suave deixa tudo mais agradável. A sensação termica é de {apparent_temperature}°C 🍃🐾",
+            "image_path": "/Users/icaro/Library/CloudStorage/OneDrive-Pessoal/Documentos/icaro/cat-weather-bot/cat_weather_bot/assets/img/chilly/6a2ca38cad64864d9ff97d694a84fb62.jpg"
+        },
+        {
+            "id": 1,
+            "message": "Miau Miau {user_first_name}!\nNeste dia fresquinho, a temperatura atual é de {temperature}°C, criando um clima aconchegante para minhas patinhas. A sensação térmica é de {apparent_temperature}°C. 🍃🐾",
+            "image_path": "/Users/icaro/Library/CloudStorage/OneDrive-Pessoal/Documentos/icaro/cat-weather-bot/cat_weather_bot/assets/img/chilly/5476f3647058e196f659c80e5d2c924f.jpg"
         }
     ],
     "cold": [
         {
             "id": 0,
-            "message": "text",
-            "image_path": "image_path"
+            "message": "Miau Miau {user_first_name}!\nBrrr... o dia está realmente frio lá fora. A temperatura atual marca {temperature}°C, mas a sensação térmica é de {apparent_temperature}°C. Hora de procurar um lugar quentinho para me aconchegar! ❄️🐱",
+            "image_path": "/Users/icaro/Library/CloudStorage/OneDrive-Pessoal/Documentos/icaro/cat-weather-bot/cat_weather_bot/assets/img/cold/33d09363d41c65be6f4dfde3ac496bd3.jpg"
+        },
+        {
+            "id": 1,
+            "message": "Miau Miau {user_first_name}!\nO frio chegou com tudo! A temperatura está marcando {temperature}°C, e a sensação térmica é de {apparent_temperature}°C. Estou procurando um cantinho quentinho! ❄️🐱",
+            "image_path": "/Users/icaro/Library/CloudStorage/OneDrive-Pessoal/Documentos/icaro/cat-weather-bot/cat_weather_bot/assets/img/cold/82de5a11540dd6858608adbf7bb7c9ca.jpg"
         }
     ],
     "hot": [
         {
             "id": 0,
-            "message": "text",
-            "image_path": "image_path"
+            "message": "Miau Miau {user_first_name}!\nEstá um dia quente e ensolarado, perfeito para um cochilo na sombra. A temperatura atinge {temperature}°C, e a brisa quente incomoda um pouco, quero um banho! A sensação termica é de {apparent_temperature}°C ☀️😺",
+            "image_path": "/Users/icaro/Library/CloudStorage/OneDrive-Pessoal/Documentos/icaro/cat-weather-bot/cat_weather_bot/assets/img/hot/2df15a214ccd2adab0f96127a8271db9.jpeg"
+        },
+        {
+            "id": 1,
+            "message": "Miau Miau {user_first_name}!\nQue calor! A temperatura está em {temperature}°C, e a sensação térmica é de {apparent_temperature}°C. Acho que preciso de uma agua geladinha. Estou procurando uma sombrinha para descansar. ☀️😺",
+            "image_path": "/Users/icaro/Library/CloudStorage/OneDrive-Pessoal/Documentos/icaro/cat-weather-bot/cat_weather_bot/assets/img/hot/2129fc8105820874182f695137774fcb.jpg"
         }
     ],
     "mild": [
         {
             "id": 0,
-            "message": "text",
-            "image_path": "image_path"
+            "message": "Miau Miau {user_first_name}!\nO clima está ameno e agradável. Com {temperature}°C, é um convite para explorar o jardim. Nem muito quente, nem muito frio - simplesmente perfeito para tirar um cochilo! A sensação termica é de {apparent_temperature}°C 🌸🌤️",
+            "image_path": "/Users/icaro/Library/CloudStorage/OneDrive-Pessoal/Documentos/icaro/cat-weather-bot/cat_weather_bot/assets/img/mild/2df15a214ccd2adab0f96127a8271db9.jpg"
+        },
+        {
+            "id": 1,
+            "message": "Miau Miau {user_first_name}!\nEsse clima ameno é perfeito para uma saidinha lá fora. A temperatura é de {temperature}°C, deixando o ambiente agradável. 🌸🌤️",
+            "image_path": "/Users/icaro/Library/CloudStorage/OneDrive-Pessoal/Documentos/icaro/cat-weather-bot/cat_weather_bot/assets/img/mild/2130540a88293069416eb576eda8aeaa.jpg"
         }
     ],
     "very_cold": [
         {
             "id": 0,
-            "message": "text",
-            "image_path": "image_path"
+            "message": "Miau Miau {user_first_name}!\nEstá fazendo muito frio lá fora! A temperatura caiu para {temperature}°C, e a sensação térmica é ainda mais gelada, registrando {apparent_temperature}°C. Hora de se enrolar e ficar bem quentinho! ❄️🧣",
+            "image_path": "/Users/icaro/Library/CloudStorage/OneDrive-Pessoal/Documentos/icaro/cat-weather-bot/cat_weather_bot/assets/img/very_cold/Cold_cat_hero.jpg"
+        },
+        {
+            "id": 1,
+            "message": "Miau Miau {user_first_name}!\nEstá um gelo lá fora! A temperatura despencou para {temperature}°C, e a sensação térmica é de {apparent_temperature}°C. Estou me encolhendo para ficar quentinho! ❄️🧣",
+            "image_path": "/Users/icaro/Library/CloudStorage/OneDrive-Pessoal/Documentos/icaro/cat-weather-bot/cat_weather_bot/assets/img/very_cold/iStock-898760762.jpg"
         }
     ],
     "very_hot": [
         {
             "id": 0,
-            "message": "text",
-            "image_path": "image_path"
+            "message": "Miau Miau {user_first_name}!\nO calor está intenso hoje! Com {temperature}°C, a sensação térmica é ainda mais elevada de {apparent_temperature}°C. Melhor encontrar uma sombra fresca para relaxar e evitar esse calor que não ta pra gato. ☀️🔥",
+            "image_path": "/Users/icaro/Library/CloudStorage/OneDrive-Pessoal/Documentos/icaro/cat-weather-bot/cat_weather_bot/assets/img/very_hot/0cbf94eaf35247980a0e524716b40d9f.jpg"
+        },
+        {
+            "id": 1,
+            "message": "Miau Miau {user_first_name}!\nEsse calor está demais! A temperatura é de {temperature}°C, e a sensação térmica é de {apparent_temperature}°C. Estou procurando uma sombrinha e água fresca para me hidratar. ☀️🔥",
+            "image_path": "/Users/icaro/Library/CloudStorage/OneDrive-Pessoal/Documentos/icaro/cat-weather-bot/cat_weather_bot/assets/img/very_hot/6e03ea0642c078cca9e078e1aa2993ba.jpg"
         }
     ]
 }

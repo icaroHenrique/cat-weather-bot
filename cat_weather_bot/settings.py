@@ -1,6 +1,7 @@
-from dynaconf import Dynaconf
 import json
 import os
+
+from dynaconf import Dynaconf
 
 ROOT_PATH = os.path.dirname(__file__)
 DB_PATH = os.path.join(ROOT_PATH, "assets", "database.json")

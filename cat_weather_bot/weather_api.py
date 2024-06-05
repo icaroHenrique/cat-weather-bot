@@ -5,7 +5,7 @@ import requests
 
 
 @dataclass
-class OpenWeatherApi:
+class WeatherApi:
     api_key: str
     units: str = "metric"
     mode: str = "json"
@@ -13,8 +13,7 @@ class OpenWeatherApi:
     base_api_url: str = "https://api.openweathermap.org/data/2.5/weather"
 
     def __create_api_url(self):
-        API_PARAMETERS = f"appid={self.api_key}&units={self.units} \
-                            &mode={self.mode}&lang={self.lang}"
+        API_PARAMETERS = f"appid={self.api_key}&units={self.units}&mode={self.mode}&lang={self.lang}"
         API_URL = f"{self.base_api_url}?{API_PARAMETERS}"
         return API_URL
 
