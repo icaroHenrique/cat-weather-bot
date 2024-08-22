@@ -1,17 +1,21 @@
-name: Docker Build and Publish Docker Hub 
+name: Build Image Docker and Push Docker Hub
 
 env:
   DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
   DOCKER_HUB_USERNAME: "icarohenrique"
 
 on:
-  pull_request:
+  push:
     branches:
     - "publish"
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  build-push:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+    runs-on: ${{matrix.os}}
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -27,4 +31,4 @@ jobs:
         context: .
         platforms: linux/amd64,linux/arm64,linux/arm64/v8
         push: true
-        tags: icarohenrique/cat-weather-bot:latest 
+        tags: icarohenrique/cat-weather-bot:latest
