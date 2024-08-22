@@ -1,17 +1,58 @@
+[build-system]
+requires = [
+  "setuptools",
+  "setuptools-scm",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cat-weather-bot"
+authors = [
+  { name = "Icaro Henrique", email = "icaro.henrique001@gmail.com" }
+]
+description = "Cat Weather Bot is a Telegram bot that receives a location sented by the user and returns the temperature and apparent temperature that location."
+readme = "README.md"
+license = {text = "MIT License"}
+requires-python = ">=3.12"
+keywords = ["weather", "bot", "weather bot"]
+version = "0.2.1"
+dynamic = ["dependencies", "optional-dependencies"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/icaroHenrique/cat-weather-bot"
+
+
+[project.scripts]
+cat-weather-bot = "cat_weather_bot.__main__:main"
+
+[tool.setuptools.packages]
+find = {include = ["cat_weather_bot", "assets"], exclude = ["tests"]}
+
+[tool.setuptools.package-data]
+'assets' = ["**/*"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+optional-dependencies = { dev = {file = ["requirements.dev.txt"]}, test = {file = ["requirements.test.txt"]} }
+
 [tool.pytest.ini_options]
 minversion = "6.0"
 addopts = "-ra -q -vv -s"
 testpaths = [
-    "tests",
-    "integration"
+    "tests"
 ]
 
 [tool.flake8]
 exclude = [".venv", "build"]
-max-line-length = 79
+max-line-length = 100
 
 [tool.black]
-line-length = 79
+line-length = 100
 target-version = ["py36", "py37"]
 exclude = '''
 /(
@@ -27,5 +68,7 @@ exclude = '''
 
 [tool.isort]
 profile = "black"
-src_paths = ["cat-weather-bot", "tests", "integration"]
+src_paths = ["cat_weather_bot", "tests"]
 multi_line_output = 3  # VHI
+
+

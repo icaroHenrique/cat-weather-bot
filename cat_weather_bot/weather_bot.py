@@ -1,8 +1,8 @@
 import logging
 from dataclasses import dataclass
 
-from cat_weather_bot.core import CoreFunctions
-from cat_weather_bot.database import Database, ThermalSensation
+from cat_weather_bot.models import Image, Message
+from cat_weather_bot.thermal_sensation import ThermalSensation
 from cat_weather_bot.weather_api import WeatherApi
 from telegram import Update
 from telegram.ext import (
@@ -14,42 +14,35 @@ from telegram.ext import (
     filters,
 )
 
+
 @dataclass
 class WeatherBot:
-    thermal_sensation: ThermalSensation
-    core: CoreFunctions
-    database: Database
+    """
+    Comunication controller with telegram bot.
+
+    Functions use the telegram bot for send messages and images based temperature actualy in
+    location sended by user
+
+    Need create bot in telegram api and generate token: https://core.telegram.org/bots/tutorial
+
+    :param images: Object of class Image for defined path with images thermal sensation
+    :param messages: Object of class Message for get messages used in respose
+    :param weather_api: Object of class WheatherApi for consult the temperature based location
+    :param telegram_token: Token generate with BotFather in telegram
+    :param name: Name for used in your bot
+    """
+
+    images: Image
+    messages: Message
     weather_api: WeatherApi
     telegram_token: str
     name: str = "Weather Bot"
 
-    def __define_thermal_sensation(self, temperature: int | float):
-        thermal_sensations_check = {
-            "very_cold": lambda temperature: temperature < 0,
-            "cold": lambda temperature: temperature > 0 and temperature <= 10,
-            "chilly": lambda temperature: temperature > 10
-            and temperature <= 15,
-            "mild": lambda temperature: temperature > 15 and temperature <= 25,
-            "hot": lambda temperature: temperature > 25 and temperature <= 35,
-            "very_hot": lambda temperature: temperature > 35,
-        }
-
-        for (
-            thermal_sensation,
-            thermal_sensation_check,
-        ) in thermal_sensations_check.items():
-            if thermal_sensation_check(temperature):
-                thermal_sensation_define = thermal_sensation
-
-        return ThermalSensation(thermal_sensation_define)
-
-    async def __location(
-        self, update: Update, context: ContextTypes.DEFAULT_TYPE
-    ):
+    async def __location(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         user = update.message.from_user
         user_location = update.message.location
 
-        logging.info(
+        logging.debug(
             "Location of %s: %f / %f",
             user.first_name,
             user_location.latitude,
@@ -62,34 +55,29 @@ class WeatherBot:
 
         temperature, apparent_temperature = temperature_info.values()
 
-        thermal_sensation = self.__define_thermal_sensation(temperature)
+        thermal_sensation = ThermalSensation(temperature)
 
-        message = self.core.read_random_message_to_thermal_sensation(
-            self.database, thermal_sensation
-        )
+        message = self.messages.get_random_message_to_thermal_sensation(thermal_sensation)
+        image = self.images.get_random_image_to_thermal_sensation(thermal_sensation)
 
-        image_path = message["image_path"]
-        text = message["message"]
-
-        text_formated = text.format(
+        message_formated = message.format(
             user_first_name=user.first_name,
             temperature=temperature,
             apparent_temperature=apparent_temperature,
         )
-        image = open(image_path, "rb")
 
-        await update.message.reply_photo(photo=image, caption=text_formated)
+        try:
+            with open(image, "rb") as image:
+                await update.message.reply_photo(photo=image, caption=message_formated)
+        except Exception as e:
+            logging.error("FAILED OPEN IMAGE")
+            logging.exception(e)
 
-        image.close()
         return ConversationHandler.END
 
-    async def __getme(
-        self, update: Update, context: ContextTypes.DEFAULT_TYPE
-    ):
-        bot = update.get_bot()
-        message = update.message.to_json()
-        print(message)
-        print(await bot.get_me())
+    async def __getme(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
+        message = f"Bot Name: {self.name}, Lang: {self.weather_api.lang}"
+        await update.message.reply_text(message)
 
     def start_bot(self):
         application = ApplicationBuilder().token(self.telegram_token).build()

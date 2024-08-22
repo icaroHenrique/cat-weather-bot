@@ -1,4 +1,6 @@
-FROM python:3.11-alpine3.18
+FROM python:3.12-alpine3.19
+WORKDIR /app
 COPY . .
-RUN pip install -r requirements.txt
-ENTRYPOINT ["python", "cat-weather-bot"]
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir .
+ENTRYPOINT ["cat-weather-bot"]

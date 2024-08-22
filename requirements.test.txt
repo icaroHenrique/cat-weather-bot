@@ -1,6 +1,8 @@
 pytest
+pytest-watch
 pytest-forked
 flake8
 pyproject-flake8
 black
 isort
+

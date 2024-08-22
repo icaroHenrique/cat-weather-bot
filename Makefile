@@ -2,7 +2,7 @@
 
 install:
 	@echo "Installing for dev environment"
-	@.venv/bin/python -m pip install -e '.[dev]'
+	@.venv/bin/python -m pip install -r requirements.dev.txt -e '.[dev]'
 
 install-dev:
 	@.venv/bin/python -m pip install -r requirements.dev.txt
@@ -12,7 +12,6 @@ install-test:
 
 virtualenv:
 	@python -m venv .venv
-	@python -m pip install --upgrade pip
 
 ipython:
 	@.venv/bin/ipython
@@ -24,11 +23,11 @@ lint:
 	@.venv/bin/pflake8
 
 fmt:
-	@.venv/bin/isort cat-weather-bot tests integration
-	@.venv/bin/black cat-weather-bot tests integration
+	@.venv/bin/isort cat_weather_bot tests
+	@.venv/bin/black cat_weather_bot tests
 
 test:
-	@.venv/bin/pytest -s --forked
+	@.venv/bin/pytest -s --forked -vv
 
 testci:
 	@pytest -v --junitxml=test-result.xml

@@ -1,16 +1,18 @@
-# Dev dependencies
+pytest
+pytest-watch
+pytest-forked
+flake8
+pyproject-flake8
+black
+isort
+
+
 ipython>=7.0.0,<=8.0.0
 ipdb
 pudb
-pytest-watch
-
-# Code Quality
-black
-flake8
-pyproject-flake8
-isort
 
 requests==2.28.2
 python-telegram-bot==20.7
 dynaconf==3.2.4
 python-dotenv==1.0.0
+filetype

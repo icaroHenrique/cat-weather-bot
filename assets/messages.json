@@ -1,0 +1,26 @@
+{
+    "chilly": [
+        "Miau Miau {user_first_name}!\nHoje, o ambiente está fresco e aconchegante. A temperatura atual é de {temperature}°C, e a sensação termica é de {apparent_temperature}°C 🍃🐾",
+        "Miau Miau {user_first_name}!\nNeste dia fresquinho, a temperatura atual é de {temperature}°C, e a sensação térmica é de {apparent_temperature}°C. 🍃🐾"
+    ],
+    "cold": [
+        "Miau Miau {user_first_name}!\nBrrr... o dia está realmente frio lá fora. A temperatura atual marca {temperature}°C, mas a sensação térmica é de {apparent_temperature}°C. Hora de procurar um lugar quentinho para aconchegar! ❄️🐱",
+        "Miau Miau {user_first_name}!\nO frio chegou com tudo! A temperatura está marcando {temperature}°C, e a sensação térmica é de {apparent_temperature}°C. Procure um lugar quente! ❄️🐱"
+    ],
+    "hot": [
+        "Miau Miau {user_first_name}!\nEstá um dia quente e ensolarado, hora de tomar um banho frio!. A temperatura atinge {temperature}°C, e a sensação termica é de {apparent_temperature}°C ☀️😺",
+        "Miau Miau {user_first_name}!\nQue calor! A temperatura está em {temperature}°C, e a sensação térmica é de {apparent_temperature}°C. Acho melhor tomar uma agua geladinha. ☀️😺"
+    ],
+    "mild": [
+        "Miau Miau {user_first_name}!\nO clima está ameno e agradável. Com {temperature}°C, nem muito quente, nem muito frio. A sensação termica é de {apparent_temperature}°C 🌸🌤️",
+        "Miau Miau {user_first_name}!\nEsse clima ameno é bom para um cochilo. A temperatura é de {temperature}°C. 🌸🌤️"
+    ],
+    "very_cold": [
+        "Miau Miau {user_first_name}!\nTa muito frio lá fora! A temperatura caiu para {temperature}°C, e a sensação térmica é de {apparent_temperature}°C. Hora de buscar um cobertor! ❄️🧣",
+        "Miau Miau {user_first_name}!\nEstá um gelo lá fora! A temperatura despencou para {temperature}°C, e a sensação térmica é de {apparent_temperature}°C. busque se esquentar! ❄️🧣"
+    ],
+    "very_hot": [
+        "Miau Miau {user_first_name}!\nO calor está intenso hoje! Com {temperature}°C, a sensação térmica é de {apparent_temperature}°C. Melhor encontrar uma sombra fresca para relaxar e beba agua! ☀️🔥",
+        "Miau Miau {user_first_name}!\nEsse calor está demais! A temperatura é de {temperature}°C, e a sensação térmica é de {apparent_temperature}°C. Está na hora de se hidratar ☀️🔥"
+    ]
+}

@@ -4,3 +4,6 @@ __pycache__/
 # Ignore dynaconf secret files
 .secrets.*
 .python-version
+*.egg-info
+dist/
+.DS_Store
