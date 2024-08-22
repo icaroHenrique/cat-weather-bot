@@ -5,9 +5,7 @@ env:
   DOCKER_HUB_USERNAME: "icarohenrique"
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: [ "publish" ]
 
 jobs:
   build:
