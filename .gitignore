@@ -3,3 +3,7 @@ __pycache__/
 .venv
 # Ignore dynaconf secret files
 .secrets.*
+.python-version
+*.egg-info
+dist/
+.DS_Store

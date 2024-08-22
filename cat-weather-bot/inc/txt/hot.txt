@@ -1,2 +1,0 @@
-Miau Miau {user_first_name}!\nEstá um dia quente e ensolarado, perfeito para um cochilo na sombra. A temperatura atinge {temperature}°C, e a brisa quente incomoda um pouco, quero um banho! A sensação termica é de {apparent_temperature}°C ☀️😺
-Miau Miau {user_first_name}!\nQue calor! A temperatura está em {temperature}°C, e a sensação térmica é de {apparent_temperature}°C. Acho que preciso de uma agua geladinha. Estou procurando uma sombrinha para descansar. ☀️😺

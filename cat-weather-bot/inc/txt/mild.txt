@@ -1,2 +1,0 @@
-Miau Miau {user_first_name}!\nO clima está ameno e agradável. Com {temperature}°C, é um convite para explorar o jardim. Nem muito quente, nem muito frio - simplesmente perfeito para tirar um cochilo! A sensação termica é de {apparent_temperature}°C 🌸🌤️
-Miau Miau {user_first_name}!\nEsse clima ameno é perfeito para uma saidinha lá fora. A temperatura é de {temperature}°C, deixando o ambiente agradável. 🌸🌤️

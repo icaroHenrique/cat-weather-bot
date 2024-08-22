@@ -1,2 +1,0 @@
-Miau Miau {user_first_name}!\nHoje, o ambiente está fresco e aconchegante para um gatinho tranquilo como eu. A temperatura atual é de {temperature}°C, e a brisa suave deixa tudo mais agradável. A sensação termica é de {apparent_temperature}°C 🍃🐾
-Miau Miau {user_first_name}!\nNeste dia fresquinho, a temperatura atual é de {temperature}°C, criando um clima aconchegante para minhas patinhas. A sensação térmica é de {apparent_temperature}°C. 🍃🐾

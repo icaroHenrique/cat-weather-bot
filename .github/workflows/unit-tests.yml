@@ -1,0 +1,60 @@
+name: Unit Tests
+
+on:
+  pull_request:
+    branches:
+    - "main"
+    - "publish"
+
+permissions:
+  contents: read
+  issues: read
+  checks: write
+  pull-requests: write
+
+jobs:
+  lint:
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [3.12]
+        os: [ubuntu-latest]
+    runs-on: ${{matrix.os}}
+    steps: 
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: ${{matrix.python-version}}
+    - name: Install project
+      run: pip install '.[test]'
+    - name: Look for style errors
+      run: pflake8
+    - name: Check for importing style
+      run: isort --profile=black -m 3 --check --diff cat_weather_bot tests 
+    - name: Look for auto format errors
+      run: black --check --diff cat_weather_bot tests 
+
+  tests:
+    needs: lint
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [3.12]
+        os: [ubuntu-latest]
+    runs-on: ${{matrix.os}}
+    steps: 
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: ${{matrix.python-version}}
+    - name: Install project
+      run: pip install '.[test]'
+    - name: Run tests
+      run: pytest -v --junitxml=test-result.xml
+    - name: Publish junit result test ci
+      uses: EnricoMi/publish-unit-test-result-action@v2
+      if: always()
+      with:
+        files: test-result.xml
+        check_name: Test Result (Python ${{matrix.python-version}})
+
