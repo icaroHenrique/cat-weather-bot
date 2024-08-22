@@ -18,6 +18,7 @@ class WeatherApi:
     return value in Fahrenheit.
     :param lang: parameter to get the output in language specify.
     """
+
     api_key: str
     units: str = "metric"
     lang: str = "pt_br"
@@ -32,7 +33,6 @@ class WeatherApi:
         try:
             request = requests.get(url=f"{api_url}&lat={latitude}&lon={longitude}")
         except HTTPError as e:
-            raise HTTPError()
             logging.error("Request weather api failed")
             logging.exception(e)
         else:

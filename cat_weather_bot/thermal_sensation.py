@@ -24,8 +24,5 @@ class ThermalSensation:
         """Return all thermal sensations defined"""
         return ("very_cold", "cold", "chilly", "mild", "hot", "very_hot")
 
-    def __repr__(self) -> str:
-        return self.thermal_sensation
-
-    def __str__(self):
+    def __str__(self) -> str:
         return self.thermal_sensation

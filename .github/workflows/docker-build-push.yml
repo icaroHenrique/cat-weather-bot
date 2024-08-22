@@ -1,11 +1,13 @@
-name: Docker Build
+name: Docker Build and Publish Docker Hub 
 
 env:
   DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
   DOCKER_HUB_USERNAME: "icarohenrique"
+
 on:
-  push:
-    branches: [ "publish" ]
+  pull_request:
+    branches:
+    - "publish"
 
 jobs:
   build:

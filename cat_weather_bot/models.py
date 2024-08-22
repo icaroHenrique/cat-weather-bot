@@ -5,6 +5,7 @@ import sys
 from pathlib import Path
 
 import filetype
+
 from cat_weather_bot.thermal_sensation import ThermalSensation
 
 
@@ -80,7 +81,7 @@ class Image:
                 self.path = images_path
         except FileNotFoundError as e:
             logging.exception(e)
-            #sys.exit(1)
+            sys.exit(1)
 
     def get_random_image_to_thermal_sensation(self, thermal_sensation: ThermalSensation) -> Path:
         """

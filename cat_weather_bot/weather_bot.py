@@ -1,9 +1,6 @@
 import logging
 from dataclasses import dataclass
 
-from cat_weather_bot.models import Image, Message
-from cat_weather_bot.thermal_sensation import ThermalSensation
-from cat_weather_bot.weather_api import WeatherApi
 from telegram import Update
 from telegram.ext import (
     ApplicationBuilder,
@@ -13,6 +10,10 @@ from telegram.ext import (
     MessageHandler,
     filters,
 )
+
+from cat_weather_bot.models import Image, Message
+from cat_weather_bot.thermal_sensation import ThermalSensation
+from cat_weather_bot.weather_api import WeatherApi
 
 
 @dataclass
