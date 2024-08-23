@@ -11,6 +11,7 @@ from telegram.ext import (
     filters,
 )
 
+from cat_weather_bot.config import GIF_HELP_COMMAND
 from cat_weather_bot.models import Image, Message
 from cat_weather_bot.thermal_sensation import ThermalSensation
 from cat_weather_bot.weather_api import WeatherApi
@@ -38,6 +39,17 @@ class WeatherBot:
     weather_api: WeatherApi
     telegram_token: str
     name: str = "Weather Bot"
+
+    async def __help(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
+        message = "Envie sua localização ou outra localização qualquer e aguarde a resposta"
+        try:
+            with open(GIF_HELP_COMMAND, "rb") as gif_file:
+                await update.message.reply_document(document=gif_file, caption=message)
+        except Exception as e:
+            logging.error("FAILED OPEN IMAGE")
+            logging.exception(e)
+
+        return ConversationHandler.END
 
     async def __location(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         user = update.message.from_user
@@ -84,6 +96,8 @@ class WeatherBot:
         application = ApplicationBuilder().token(self.telegram_token).build()
         location_handler = MessageHandler(filters.LOCATION, self.__location)
         getme_handler = CommandHandler("getme", self.__getme)
+        help_handler = CommandHandler("help", self.__help)
         application.add_handler(location_handler)
         application.add_handler(getme_handler)
+        application.add_handler(help_handler)
         application.run_polling(allowed_updates=Update.ALL_TYPES)

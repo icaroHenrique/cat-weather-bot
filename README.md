@@ -7,6 +7,11 @@ Cat Weather Bot is a Telegram bot that receives a location sented by the user an
 The bot uses the Telegram API to communicate within the chat (it can be used by calling the bot privately or adding it to a group) and the Open Weather API, which provides the temperature based on the coordinates captured within Telegram when the location is sent. The Open Weather API has a free subscription sufficient for our bot, but it is possible to switch to a paid subscription to obtain more data beyond temperature.
 
 # How to use
+Search in Telegram App the bot @Cat_WeatherBot or add bot in Chat Groups.
+Send your location or other location and waiting result.
+
+<p align="left"><img src="/assets/cat-weather-bot.gif" alt="use cat weather bot" width="500" height="600"></p>
+
 ## Authorization with API Keys
 
 A token is required for each of the APIs mentioned for the bot's usage. You will find more details in the official documentation for each API below:
