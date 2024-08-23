@@ -4,12 +4,10 @@ from pathlib import Path
 
 from dynaconf import Dynaconf, Validator
 
-
-
 ROOT_PATH = Path(dirname(__file__)).resolve().parent
 IMAGES_PATH = Path(ROOT_PATH, "assets/img")
 MESSAGES_FILE_PATH = Path(ROOT_PATH, "assets/messages.json")
-GIF_HELP_COMMAND=Path(ROOT_PATH, "assets/cat-weather-bot.gif")
+GIF_HELP_COMMAND = Path(ROOT_PATH, "assets/cat-weather-bot.gif")
 
 
 settings = Dynaconf(

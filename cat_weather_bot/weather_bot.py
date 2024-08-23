@@ -11,10 +11,10 @@ from telegram.ext import (
     filters,
 )
 
+from cat_weather_bot.config import GIF_HELP_COMMAND
 from cat_weather_bot.models import Image, Message
 from cat_weather_bot.thermal_sensation import ThermalSensation
 from cat_weather_bot.weather_api import WeatherApi
-from cat_weather_bot.config import GIF_HELP_COMMAND
 
 
 @dataclass
@@ -39,6 +39,7 @@ class WeatherBot:
     weather_api: WeatherApi
     telegram_token: str
     name: str = "Weather Bot"
+
     async def __help(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
         message = "Envie sua localização ou outra localização qualquer e aguarde a resposta"
         try:
